@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            margin: 50px auto 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<table>
+
+</table>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+
+        let $tbody = $("<tbody></tbody>");
+
+        $("table").append($tbody);
+
+        let header = ["empNo", "empName", "job", "mgr", "hireDate", "sal", "com", "deptNo"];
+
+        let $headerTr = $("<tr></tr>");
+
+        $tbody.append($headerTr);
+
+        $.each(header,function (index , value) {
+            $headerTr.append("<th>"+ value +"</th>");
+        });
+
+        let requestURL = "https://wakeijia.github.io/web-demo/data/empList.json";
+        $.ajax({
+            url: requestURL,
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+                /*let $dataTr;
+                $.each(response,function (index,value) {
+                    $dataTr = $("<tr></tr>");
+                    $tbody.append($dataTr);
+                    $.each(header,function (index1,value1) {
+                        $dataTr.append("<td>"+ response[index][value1] +"</td>");
+                    })
+                });*/
+                let $dataTr;
+                for (let i = 0; i < response.length; i++) {
+                    $dataTr = $("<tr></tr>");
+                    $tbody.append($dataTr);
+                    let $dataTd;
+                    for (let j = 0; j < header.length; j++) {
+                        $dataTd = $("<td></td>");
+                        $dataTr.append($dataTd);
+                        let property = header[j];
+                        $dataTd.text(response[i][property]);
+                    }
+                }
+            }
+        });
+
+
+
+    });
+
+</script>
+
+</body>
+</html>

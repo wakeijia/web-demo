@@ -21,9 +21,53 @@
     </style>
 </head>
 <body>
+<table>
+
+</table>
 
 <script>
-    
+    document.addEventListener("DOMContentLoaded", function () {
+        let table = document.querySelector("table");
+        let tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+        let header = ["empNo", "empName", "job", "mgr", "hireDate", "sal", "com", "deptNo"];
+        // 创建表头
+        let headerTr = document.createElement("tr");
+        tbody.appendChild(headerTr);
+        let th;
+        for (let i = 0; i < header.length; i++) {
+            th = document.createElement("th");
+            th.textContent = header[i];
+            headerTr.appendChild(th);
+        }
+        let requestURL = "https://wakeijia.github.io/web-demo/data/empList.json";
+        let request = new XMLHttpRequest();
+        request.open("GET", requestURL);
+        request.responseType = "json";
+        request.send();
+        request.onload = function () {
+            let empList = request.response;
+            // 表的数据部分
+            let dataTr;
+            // 遍历员工数组
+            for (let i = 0; i < empList.length; i++) {
+                dataTr = document.createElement("tr");
+                tbody.appendChild(dataTr);
+                let dataTd;
+                // 遍历表头
+                for (let j = 0; j < header.length; j++) {
+                    dataTd = document.createElement("td");
+                    dataTr.appendChild(dataTd);
+                    // 对象 员工
+                    let emp = empList[i];
+                    // 属性 empNo
+                    let property = header[j];
+                    // 访问emp的属性值
+                    dataTd.textContent = emp[property];
+                }
+            }
+        };
+    });
 </script>
 
 

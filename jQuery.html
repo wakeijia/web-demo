@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <button class="continue"></button>
+    <button class="prev"></button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    //dom
+    let buttonContinue = document.querySelector('button.continue');
+    buttonContinue.innerHTML = ('Next step...');
+
+    //jquery $表示jquery对象html()
+    //$("button.prev").html("Prev step...")
+    let $prevButton = $("button.prev");
+    $prevButton.html('Prev step...');
+
+    buttonContinue.addEventListener('click',function () {
+        alert('Next step...');
+    });
+
+    $prevButton.on('click',function () {
+        alert('Prev step...');
+    });
+
+    //$prevbutton.click(function () {
+    //});
+
+    //jquery ajax
+    let requestURL = "https://wakeijia.github.io/web-demo/data/empList.json";
+    $.ajax({
+        url: requestURL,
+        method: "GET",
+        dataType: "json",
+        success: function (response) {
+            alert(response[1]['empNo']);
+        }
+    });
+
+</script>
+
+</body>
+</html>
