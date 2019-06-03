@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击我</button>
+<button>点击我</button>
+<script>
+    // 给document增加一个事件 dom内容加载完后
+    document.addEventListener("DOMContentLoaded",function () {
+        function createP() {
+            //创建一个P元素
+            let p = document.createElement("p");
+            p.textContent = ("你点击了这个按钮");
+            // 将p元素添加到body里，作为孩子节点
+            document.body.appendChild(p);
+        }
+        //获取页面所有button得到一个数组
+        let buttons = document.querySelectorAll("button");
+        //遍历数组
+        for (let i=0;i<buttons.length ;i++){
+            //给按钮增加单击事件
+            buttons[i].addEventListener("click",createP);
+        }
+    });
+</script>
+
+</body>
+</html>

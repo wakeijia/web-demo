@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        tr{
+            font-size: 18px;
+            background-color: #024cff;
+            -webkit-text-fill-color: #ffdaa6;/*文字的填充色*/
+            -webkit-text-stroke: 0 #000;
+
+        }
+        td{
+            padding: 10px 40px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        form{
+            margin: 50px auto 0 auto;
+            width: 600px;
+        }
+
+        form div + div {
+            margin-top: 2em;
+        }
+        label {
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+        input{
+            width: 325px;
+            border: 1px solid silver;
+            border-radius: .3em;
+            height: 25px;
+            margin: 10px;
+        }
+        select{
+            width: 80px;
+            border: 1px solid silver;
+            height: 25px;
+            margin: 10px;
+        }
+        .button{
+            padding-left: 105px;
+        }
+        button{
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+<table>
+    <tr>
+        <td>注册免费邮箱</td>
+        <td>注册VIP邮箱</td>
+    </tr>
+</table>
+<form action="#" method="post">
+    <div>
+        <label for="adress">*邮箱地址</label>
+        <input type="text" name="" id="adress" style="width: 200px">
+        <em>@</em>
+        <select name="" id="com">
+            <option value="qq">qq.com</option>
+            <option value="网易">163.com</option>
+            <option value="微软">outlook.com</option>
+        </select>
+    </div>
+    <div>
+        <label for="password">*密码</label>
+        <input type="text" name="" id="password">
+    </div>
+    <div>
+        <label for="passwords">*确认密码</label>
+        <input type="text" name="" id="passwords">
+    </div>
+    <div>
+        <label for="accept">*验证码</label>
+        <input type="text" name="" id="accept" style="width: 200px">
+    </div>
+    <div>
+        <label for="num">*手机号码</label>
+        <input type="text" name="" id="num" value="+86-" >
+    </div>
+    <div>
+        <input type="checkbox" name="" id="">同意"服务条款"和"隐私权相关政策"
+    </div>
+
+    <div class="button">
+        <button type="submit">已发送短信验证，立即注册</button>
+    </div>
+
+</form>
+
+</body>
+</html>

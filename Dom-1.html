@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 8px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>My shopping list</h1>
+    <label for="item">Enter a new team:</label>
+    <input type="text" name="item" id="item">
+    <button>Add item</button>
+    <button class="delete">Delete all</button>
+
+    <ul>
+
+    </ul>
+</div>
+
+<script>
+    let ul = document.querySelector("ul");
+    let input = document.querySelector("input");
+    let button = document.querySelector("button");
+    let buttons = document.querySelector(".delete");
+
+    button.addEventListener('click', click);
+
+    function click() {
+        let name = input.value;
+        input.value = '';
+        let li = document.createElement("li");
+        let span = document.createElement("span");
+        let button = document.createElement("button");
+
+        if (name === ''){
+
+            alert("请输入内容,内容为空");
+
+            input.focus();
+
+        } else {
+            span.textContent = name;
+            button.textContent = "Delete";
+            li.appendChild(span);
+            li.appendChild(button);
+            ul.appendChild(li);
+
+            button.addEventListener("click", deleteItem);
+
+            function deleteItem() {
+                ul.removeChild(li);
+                input.focus();
+            }
+
+
+            buttons.addEventListener("click",deleteAll);
+            function deleteAll(){
+                let resultUl = document.querySelectorAll("ul");
+                for (let i = 0 ; i<resultUl.length ; i++){
+                    resultUl[i].removeChild(li);
+                }
+                input.focus();
+            }
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
