@@ -1,3 +1,37 @@
 [{
-
+  "proNo": 1,
+  "cityName":"南京市"
+},{
+  "proNo": 1,
+  "cityName":"苏州市"
+},{
+  "proNo": 1,
+  "cityName":"淮安市"
+},{
+  "proNo": 1,
+  "cityName":"常州市"
+},{
+  "proNo": 2,
+  "cityName": "合肥市"
+},{
+  "proNo": 2,
+  "cityName": "芜湖市"
+},{
+  "proNo": 2,
+  "cityName": "安庆市"
+},{
+  "proNo": 2,
+  "cityName": "阜阳市"
+},{
+  "proNo": 3,
+  "cityName": "杭州市"
+},{
+  "proNo": 3,
+  "cityName": "宁波市"
+},{
+  "proNo": 3,
+  "cityName": "金华市"
+},{
+  "proNo": 3,
+  "cityName": "嘉兴市"
 }]
