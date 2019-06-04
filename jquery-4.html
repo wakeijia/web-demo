@@ -21,12 +21,9 @@
 <div>
     <select name="province" id="province">
         <option value="请选择省份">请选择省份</option>
-        <option value="江苏省">江苏省</option>
-        <option value="安徽省">安徽省</option>
-        <option value="浙江省">浙江省</option>
     </select>
     <select name="city" id="city">
-        <option value="请选择城市" id="cityId">请选择城市</option>
+        <option value="请选择城市">请选择城市</option>
     </select>
 </div>
 
@@ -34,17 +31,13 @@
 <script>
 
     $(function () {
-
-        let requestURL = "https://wakeijia.github.io/web-demo/data/empList.json";
+        let requestURL = "https://wakeijia.github.io/web-demo/data/province.json";
         $.ajax({
             url: requestURL,
             method: "GET",
             dataType: "json",
             success:function (respones) {
-                $.each(respones,function (index,value) {
 
-
-                });
             }
         });
     });

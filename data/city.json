@@ -1,37 +1,49 @@
 [{
   "proNo": 1,
-  "cityName":"南京市"
+  "cityName":"南京市",
+  "cityId": 1
 },{
   "proNo": 1,
-  "cityName":"苏州市"
+  "cityName":"苏州市",
+  "cityId": 2
 },{
   "proNo": 1,
-  "cityName":"淮安市"
+  "cityName":"淮安市",
+  "cityId": 3,
 },{
   "proNo": 1,
-  "cityName":"常州市"
+  "cityName":"常州市",
+  "cityId": 4
 },{
   "proNo": 2,
-  "cityName": "合肥市"
+  "cityName": "合肥市",
+  "cityId": 5
 },{
   "proNo": 2,
-  "cityName": "芜湖市"
+  "cityName": "芜湖市",
+  "cityId": 6
 },{
   "proNo": 2,
-  "cityName": "安庆市"
+  "cityName": "安庆市",
+  "cityId": 7
 },{
   "proNo": 2,
-  "cityName": "阜阳市"
+  "cityName": "阜阳市",
+  "cityId": 8
 },{
   "proNo": 3,
-  "cityName": "杭州市"
+  "cityName": "杭州市",
+  "cityId": 9
 },{
   "proNo": 3,
-  "cityName": "宁波市"
+  "cityName": "宁波市",
+  "cityId": 10
 },{
   "proNo": 3,
-  "cityName": "金华市"
+  "cityName": "金华市",
+  "cityId": 11
 },{
   "proNo": 3,
-  "cityName": "嘉兴市"
+  "cityName": "嘉兴市",
+  "cityId": 12
 }]
