@@ -26,13 +26,28 @@
         <option value="浙江省">浙江省</option>
     </select>
     <select name="city" id="city">
-        <option value="请选择城市">请选择城市</option>
+        <option value="请选择城市" id="cityId">请选择城市</option>
     </select>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
 
+    $(function () {
+
+        let requestURL = "https://wakeijia.github.io/web-demo/data/empList.json";
+        $.ajax({
+            url: requestURL,
+            method: "GET",
+            dataType: "json",
+            success:function (respones) {
+                $.each(respones,function (index,value) {
+
+
+                });
+            }
+        });
+    });
 
 </script>
 
